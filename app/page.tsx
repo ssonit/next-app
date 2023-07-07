@@ -1,7 +1,18 @@
-export default function Home() {
+"use client";
+
+import { Button } from "@/components/ui/Button";
+import { NextPage } from "next";
+
+interface HomeProps {}
+
+const Home: NextPage<HomeProps> = ({}) => {
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      providers
-    </main>
+    <div>
+      <Button variant={"subtle"} size={"lg"}>
+        Button
+      </Button>
+    </div>
   );
-}
+};
+
+export default Home;
