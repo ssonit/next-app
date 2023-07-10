@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { NextPage } from "next";
 
 interface HeaderProps {
@@ -5,7 +6,7 @@ interface HeaderProps {
 }
 
 const Header: NextPage<HeaderProps> = ({ classNameHeader }) => {
-  return <div className={classNameHeader}>Header</div>;
+  return <div className={cn("", classNameHeader)}>Header</div>;
 };
 
 export default Header;

@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
+import { Icons } from "@/components/Icons";
+import { Button } from "@/components/ui/button";
 import { NextPage } from "next";
 
 interface HomeProps {}
@@ -8,7 +9,8 @@ interface HomeProps {}
 const Home: NextPage<HomeProps> = ({}) => {
   return (
     <div>
-      <Button variant={"subtle"} size={"lg"}>
+      <Icons.user className="w-8 h-8"></Icons.user>
+      <Button variant={"default"} size={"lg"}>
         Button
       </Button>
     </div>

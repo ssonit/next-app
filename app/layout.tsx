@@ -1,6 +1,8 @@
-import { Providers } from "./providers";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
+import Providers from "@/components/Providers";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,10 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html
+      lang="en"
+      className={cn("bg-white text-slate-900 antialiased", inter.className)}
+    >
       <body className="min-h-screen pt-12 antialiased bg-slate-50">
         <div className="container h-full mx-auto max-w-7xl">
-          Navbar
+          <Navbar></Navbar>
           <Providers>{children}</Providers>
         </div>
       </body>
